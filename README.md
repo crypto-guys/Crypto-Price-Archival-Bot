@@ -67,6 +67,8 @@ enter you CoinMarketCap api key on line 31 of /arweave/cryptopricebot.php
 
 cntl + x to save
 
+chmod +x cryptopricebot.php
+
 # Usage
 crontab -e
 
