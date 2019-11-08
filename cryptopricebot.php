@@ -65,7 +65,11 @@ $transaction = $arweave->createTransaction($wallet, [
     ]
 ]);
 
-printf ('Your transaction ID is %s', $transaction->getAttribute('id'));
+// Outputs the transaction id which is stored in the logfile via cron
+printf ('%s', $transaction->getAttribute('id'));
+
+// 1 transaction id per line
+printf("\n");
 
 // Send the transaction to the arweave network
 // $arweave->commit($transaction);
