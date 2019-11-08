@@ -1,12 +1,13 @@
 # Crypto-Price-Archival-Bot
 Archives the top 100 cryptocurrency prices to the ARWEAVE blockchain
 
+
 # Dependencies
 You will need to register for a coinmarketcap PRO API key (this is free) get one [Here](https://pro.coinmarketcap.com/)
 
-You will also need an Arweave Wallet (this will be a .json file save it) and some AR get those [Here](https://tokens.arweave.org/)
+You will also need an Arweave Wallet (this will be a .json file save it somewhere) with some Arweave tokens [Get them Here](https://tokens.arweave.org/)
 
-This script runs on a linux host all instructions are for Ubuntu 18.04
+A Linux Host 
 
 PHP 7.2
 
@@ -14,9 +15,8 @@ Composer
 
 Arweave-PHP SDK
 
-User account with SUDO
 
-# Install
+# Install Instructions
 
 All instructions are for Ubuntu 18.04 if you are using anything else you might need to adjust the instructions.
 
@@ -48,10 +48,9 @@ git clone https://github.com/crypto-guys/Crypto-Price-Archival-Bot.git
 
 nano cryptopricebot.php
 
-enter you CoinMarketCap api key on line ??
+enter you CoinMarketCap api key on line 31 of /arweave/cryptopricebot.php
 
 cntl + x to save
-
 
 # Usage
 crontab -e
