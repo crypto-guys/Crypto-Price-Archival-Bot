@@ -13,11 +13,12 @@ use \Arweave\SDK\Support\Wallet;
 $arweave = new \Arweave\SDK\Arweave('https', 'arweave.net', '443');
 
 // Decode our JWK file to a PHP array named $jwk
-$jwk = json_decode(file_get_contents('/home/sysadmin/arweave/jwk.json'), true);
+$jwk = json_decode(file_get_contents('/arweave/jwk.json'), true);
 
 // Create a new wallet using the $jwk array
 $wallet =  new \Arweave\SDK\Support\Wallet($jwk);
 
+// Get top 100 currency data from CMC
 $url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
 $parameters = [
   'start' => '1',
@@ -42,20 +43,14 @@ curl_setopt_array($curl, array(
 ));
 
 $response = curl_exec($curl); // Send the request, save the response
-// print_r(json_decode($response)); // print json decoded response
 curl_close($curl); // Close request
 
-
-
-
-// Retrieve JSON BCH price data from bitcoinaverage
-// $results = file_get_contents('https://apiv2.bitcoinaverage.com/indices/global/ticker/BCHUSD');
 $trim_data = @json_decode(trim($response), true);
 
 // Verify data and encode data
-  if ( is_array( $trim_data ) ) {
-  $json_data = json_encode ($trim_data);
-  }
+if ( is_array( $trim_data ) ) {
+$json_data = json_encode ($trim_data);
+}
 
 // Create a new ARWEAVE transaction to store the verified data
 $transaction = $arweave->createTransaction($wallet, [
