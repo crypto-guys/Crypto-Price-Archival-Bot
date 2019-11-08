@@ -14,11 +14,15 @@ Composer
 
 Arweave-PHP SDK
 
+User account with SUDO
+
 # Install
 
 All instructions are for Ubuntu 18.04 if you are using anything else you might need to adjust the instructions.
 
-You should be logged in with the user account you will be using to run the script
+You should be logged in with the user account you will be using to run the script sudo is needed
+
+The following linux packages are recommended / required
 
 sudo apt install php-common php7.2 php7.2-cli php7.2-common php7.2-curl php7.2-gmp php7.2-json php7.2-mbstring php7.2-xml php7.2-zip cron git wget nano
 
@@ -41,6 +45,12 @@ paste the contents of you wallet json file
 cntl + x to save
 
 git clone https://github.com/crypto-guys/Crypto-Price-Archival-Bot.git
+
+nano cryptopricebot.php
+
+enter you CoinMarketCap api key on line ??
+
+cntl + x to save
 
 
 # Usage
