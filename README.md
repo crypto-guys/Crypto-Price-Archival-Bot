@@ -59,6 +59,8 @@ Add the following line to run the script every 15 minutes and log all output to 
 
 0,15,30,45 * * * * php -f /arweave/cryptopricebot.php >> /arweave/transaction.log
 
+# Example Output
+[Top 100 prices 2019-11-08 T21:30](https://arweave.net/vOsK1qQUWh8spr3atOZaMgvD6HEjmHaXfo04LQVVer8)
 
 # Cost
 This bot appears to cost about .05 USD per day
