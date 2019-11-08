@@ -26,15 +26,26 @@ The following linux packages are recommended / required
 
 sudo apt install php-common php7.2 php7.2-cli php7.2-common php7.2-curl php7.2-gmp php7.2-json php7.2-mbstring php7.2-xml php7.2-zip cron git wget nano
 
-Install [Composer](https://github.com/composer/composer) Instruction in the link
+sudo mkdir /arweave
 
-mkdir /arweave
+sudo chown yourusername:yourgroup /arweave
 
 cd /arweave
 
+Install Composer
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+php composer-setup.php
+
+php -r "unlink('composer-setup.php');"
+
+
 Install [Arweave PHP SDK](https://github.com/ArweaveTeam/arweave-php) with the following command.
 
-composer require arweave/arweave-sdk
+php composer.phar require arweave/arweave-sdk
 
 Open your wallet json file and copy the contents
 
@@ -45,6 +56,10 @@ paste the contents of you wallet json file
 cntl + x to save
 
 git clone https://github.com/crypto-guys/Crypto-Price-Archival-Bot.git
+
+mv /arweave/Crypto-Price-Archival-Bot/* /arweave
+
+rm -rf /arweave/Crypto-Price-Archival-Bot/
 
 nano cryptopricebot.php
 
@@ -58,6 +73,9 @@ crontab -e
 Add the following line to run the script every 15 minutes and log all output to transaction.log
 
 0,15,30,45 * * * * php -f /arweave/cryptopricebot.php >> /arweave/transaction.log
+
+you might need to restart cron at this point
+sudo service cron restart
 
 # Example Output
 [Top 100 prices 2019-11-08 T21:30](https://arweave.net/vOsK1qQUWh8spr3atOZaMgvD6HEjmHaXfo04LQVVer8)
