@@ -19,7 +19,7 @@ Install [Arweave PHP SDK](https://github.com/ArweaveTeam/arweave-php)
 
 composer require arweave/arweave-sdk
 
-git clone thisrepo
+git clone https://github.com/crypto-guys/Crypto-Price-Archival-Bot.git
 
 
 # Usage
