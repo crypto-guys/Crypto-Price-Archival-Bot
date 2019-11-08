@@ -24,5 +24,7 @@ git clone https://github.com/crypto-guys/Crypto-Price-Archival-Bot.git
 
 # Usage
 crontab -e
-add the following line to run the script every 15 minutes
+
+Add the following line to run the script every 15 minutes
+
 0,15,30,45 * * * * php -f /arweave/cryptopricebot.php >> /arweave/transaction.log
