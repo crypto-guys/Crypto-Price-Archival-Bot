@@ -4,7 +4,8 @@ Archives the top 100 cryptocurrency prices to the ARWEAVE blockchain
 
 
 
-
+# Dependencies
+You will need to register for a coinmarketcap PRO API key (this is free) get one [Here](https://pro.coinmarketcap.com/)
 
 # Install
 sudo apt install php-common php7.2 php7.2-cli php7.2-common php7.2-curl php7.2-gmp php7.2-json php7.2-mbstring php7.2-xml php7.2-zip cron git wget
