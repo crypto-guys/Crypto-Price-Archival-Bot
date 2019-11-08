@@ -53,3 +53,6 @@ Add the following line to run the script every 15 minutes and log all output to 
 
 # Cost
 This bot appears to cost about .05 USD per day
+
+# License
+GNU General Public License v3.0
