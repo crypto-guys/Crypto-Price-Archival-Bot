@@ -28,3 +28,6 @@ crontab -e
 Add the following line to run the script every 15 minutes and log all output to transaction.log
 
 0,15,30,45 * * * * php -f /arweave/cryptopricebot.php >> /arweave/transaction.log
+
+# Cost
+It does cost money to save data to arweave this bot appears to cost about .05 USD per day
