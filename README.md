@@ -32,7 +32,7 @@ sudo chown yourusername:yourgroup /arweave
 
 cd /arweave
 
-Install Composer
+Install [Composer](https://getcomposer.org/download/) with the following commands
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
@@ -76,8 +76,6 @@ Add the following line to run the script every 15 minutes and log all output to 
 
 0,15,30,45 * * * * php -f /arweave/cryptopricebot.php >> /arweave/transaction.log
 
-you might need to restart cron at this point
-sudo service cron restart
 
 # Example Output
 [Top 100 prices 2019-11-08 T21:30](https://arweave.net/vOsK1qQUWh8spr3atOZaMgvD6HEjmHaXfo04LQVVer8)
