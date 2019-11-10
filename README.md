@@ -80,6 +80,8 @@ Add the following line to run the script every 15 minutes and log all output to 
 # Example Output
 [Top 100 prices 2019-11-08 T21:30](https://arweave.net/vOsK1qQUWh8spr3atOZaMgvD6HEjmHaXfo04LQVVer8)
 
+[All Output](https://viewblock.io/arweave/address/qoBHlZLwwlyZd-Uj1nzpjOiAsobOm6t4vW4AaD5ik5U)
+
 # Cost
 This bot appears to cost about .05 USD per day
 
